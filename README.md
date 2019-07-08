@@ -6,3 +6,4 @@
  4. [Benchmarking](benchmarking/description.md)
  5. [Unique paths in grid](unique_paths_in_grid/description.md)
  6. [Strong Typing](strong_typing/description.md)
+ 7. [clang-tidy](clang-tools/clang-tidy-testing/description.md)
