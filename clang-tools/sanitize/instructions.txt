@@ -1,0 +1,46 @@
+10142  mkdir asan
+10143  mv asan.cpp asan/bug.cpp
+10144  clang++ asan/bug.cpp -o asan/bug -std=c++17
+10145  asan/bug
+10146  clang++ asan/bug.cpp -o asan/bug -std=c++17 --fsanitize=address
+10147  clang++ asan/bug.cpp -o asan/bug -std=c++17 --help
+10148  clang++ asan/bug.cpp -o asan/bug -std=c++17 --help | grep sanitize
+10149  clang++ asan/bug.cpp -o asan/bug -std=c++17 --fsanitize-address
+10150  clang++ asan/bug.cpp -o asan/bug -std=c++17 --fsanitize
+10151  clang++ asan/bug.cpp -o asan/bug -std=c++17 -g -fsanitize=address -fno-omit-frame-pointer
+10152  asan/bug
+10153  clang++ asan/bug.cpp -o asan/bug -std=c++17 -g -fsanitize=address
+10154  asan/bug
+10155  tmux
+10156  asan/bug
+10157  vim asan/bug.cpp
+10158* mkdir msan
+10159* vim msan/bug.cpp
+10160* clang++ msan/bug.cpp -o msan/bug -std=c++17 -g -fsanitize=memory
+10161* msan/bug
+10162* valgrind
+10163* sudo apt-get install valgrind
+10164* ll
+10165* clang++ msan/bug.cpp -std=C++17
+10166* clang++ msan/bug.cpp -std=c++17
+10167* ./a
+10168* ./a.out
+10169* valgrind --tool=memcheck ./a.out
+10170* valgrind --tool=memcheck ./a.out --leak-check=full
+10171* valgrind --tool=memcheck ./a.out --track-origins
+10172* valgrind --tool=memcheck ./a.out --track-origins=yes
+10173* valgrind --tool=memcheck ./a.out --track-origins=yes -v
+10174* clang++ msan/bug.cpp -std=C++17 -O0
+10175* clang++ msan/bug.cpp -std=c++17 -O0
+10176* valgrind --tool=memcheck ./a.out --track-origins=yes -v
+10177* valgrind --tool=memcheck ./a.out --track-origins=yes -v --leak-check=full
+10178* mkdir tsan
+10179* vim tsan/bug.cpp
+10180* git status
+10181* git add ./
+10182* git status
+10183* git reset HEAD a.out
+10184* git status
+10185* git add tsan/
+10186* vim instructions.txt
+
